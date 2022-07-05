@@ -138,34 +138,54 @@ public class Programa {
 				switch (opcao) {
 				case '1':
 					System.out.println("Venda - Revista");
-					revista.incluiNoEstoque(100); 
+					//revista.incluiNoEstoque(100); 
 					System.out.print("Quantidade: ");
-					revista.retiraDoEstoque(scanner.nextInt());
-					System.out.println("Venda realizada.");
+					int quantidadeVenda = scanner.nextInt();
+					if (revista.getEstoque() > quantidadeVenda ) {
+						revista.retiraDoEstoque(quantidadeVenda);
+						System.out.println("Venda realizada.");
+					} else {
+						System.out.println("Estoque insuficiente! Revise a quantidade");
+					}
 					System.out.println("Estoque atual: " + revista.getEstoque());
 					break;
 				case '2':
 					System.out.println("Venda - Chocolate");
-					chocolate.incluiNoEstoque(100);
+					//chocolate.incluiNoEstoque(100);
 					System.out.print("Quantidade: ");
-					chocolate.retiraDoEstoque(scanner.nextInt());
-					System.out.println("Venda realizada.");
+					quantidadeVenda = scanner.nextInt();
+					if (chocolate.getEstoque() > quantidadeVenda ) {
+						chocolate.retiraDoEstoque(quantidadeVenda);
+						System.out.println("Venda realizada.");
+					} else {
+						System.out.println("Estoque insuficiente! Revise a quantidade");
+					}
 					System.out.println("Estoque atual: " + chocolate.getEstoque());
 					break;
 				case '3':
 					System.out.println("Venda - Salgadinho");
-					salgadinho.incluiNoEstoque(100);
+					//salgadinho.incluiNoEstoque(100);
 					System.out.print("Quantidade: ");
-					salgadinho.retiraDoEstoque(scanner.nextInt());
-					System.out.println("Venda realizada.");
+					quantidadeVenda = scanner.nextInt();
+					if (salgadinho.getEstoque() > quantidadeVenda ) {
+						salgadinho.retiraDoEstoque(quantidadeVenda);
+						System.out.println("Venda realizada.");
+					} else {
+						System.out.println("Estoque insuficiente! Revise a quantidade");
+					}
 					System.out.println("Estoque atual: " + salgadinho.getEstoque());
 					break;
 				case '4':
 					System.out.println("Venda - Bebida");
-					bebida.incluiNoEstoque(100);
+					//bebida.incluiNoEstoque(100);
 					System.out.print("Quantidade: ");
-					bebida.retiraDoEstoque(scanner.nextInt());
-					System.out.println("Venda realizada.");
+					quantidadeVenda = scanner.nextInt();
+					if (bebida.getEstoque() > quantidadeVenda) {
+						bebida.retiraDoEstoque(scanner.nextInt());
+						System.out.println("Venda realizada.");
+					} else {
+						System.out.println("Estoque insuficiente! Revise a quantidade");
+					}
 					System.out.println("Estoque atual: " + bebida.getEstoque());
 					break;
 				default:
@@ -187,8 +207,7 @@ public class Programa {
 		} else {
 			System.out.println("Opção inválida! Execute novamente.");
 		}
-		
-		
+			
 		scanner.close();
 	}
 
