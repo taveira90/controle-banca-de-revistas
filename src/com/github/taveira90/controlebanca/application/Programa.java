@@ -24,10 +24,19 @@ public class Programa {
 		System.out.println("O que deseja fazer?\n"
 							+ "1 - Incluir"
 							+ "\n2 - Vender");
-		System.out.println("==================================================================================");
-		
 		char opcao = scanner.next().charAt(0);
+		System.out.println("==================================================================================");
+
+		while (opcao != '1' && opcao != '2') {
+			System.out.println("   Opção inválida!"
+					+ "\nO que deseja fazer?"
+					+ "\n1 - Incluir"
+					+ "\n2 - Vender");
+			opcao = scanner.next().charAt(0);
+		}
 		
+		System.out.println("==================================================================================");
+				
 		if (opcao == '1') {
 			do {
 				System.out.println("Qual produto deseja incluir?\n"
@@ -105,6 +114,12 @@ public class Programa {
 				
 				System.out.println("Deseja incluir outro produto? (s/n)");
 				opcao = scanner.next().charAt(0);
+				while (opcao != 's' && opcao != 'n') {
+					System.out.println("Opção inválida! "
+							+ "\nDeseja incluir outro produto? (s/n) ");
+					opcao = scanner.next().charAt(0);
+				}
+				
 				System.out.println("==================================================================================");
 				
 			} while (opcao != 'n');
@@ -158,6 +173,12 @@ public class Programa {
 			}
 				System.out.println("Deseja vender outro produto? (s/n)");
 				opcao = scanner.next().charAt(0);
+				while (opcao != 's' && opcao != 'n') {
+					System.out.println("   Opção inválida! "
+							+ "\nDeseja vender outro produto? (s/n) ");
+					opcao = scanner.next().charAt(0);
+				}
+				
 				System.out.println("==================================================================================");
 				
 			} while (opcao != 'n');
