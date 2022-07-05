@@ -19,9 +19,12 @@ public class Programa {
 		Salgadinho salgadinho = new Salgadinho(0, null, null);
 		Bebida bebida = new Bebida(0, null, null);
 		
-		System.out.println("===== CONTROLE =====");
-		System.out.println("\n1 - Incluir"
-						 + "\n2 - Vender");
+		System.out.println("===== CONTROLE DE ESTOQUE =====");
+		System.out.println("==================================================================================");
+		System.out.println("O que deseja fazer?\n"
+							+ "1 - Incluir"
+							+ "\n2 - Vender");
+		System.out.println("==================================================================================");
 		
 		char opcao = scanner.next().charAt(0);
 		
@@ -33,6 +36,7 @@ public class Programa {
 						+ "\n3 - Salgadinho"
 						+ "\n4 - Bebida");
 				opcao = scanner.next().charAt(0);
+				System.out.println("==================================================================================");
 				
 				switch (opcao) {
 					case '1':
@@ -101,9 +105,10 @@ public class Programa {
 				
 				System.out.println("Deseja incluir outro produto? (s/n)");
 				opcao = scanner.next().charAt(0);
+				System.out.println("==================================================================================");
 				
 			} while (opcao != 'n');
-			System.out.println("Programa encerrado");
+			System.out.println("===== PROGRAMA ENCERRADO =====");
 			
 		} else if(opcao == '2') {
 			do {
@@ -113,6 +118,7 @@ public class Programa {
 						+ "\n3 - Salgadinho"
 						+ "\n4 - Bebida");
 				opcao = scanner.next().charAt(0);
+				System.out.println("==================================================================================");
 				
 				switch (opcao) {
 				case '1':
@@ -126,7 +132,7 @@ public class Programa {
 				case '2':
 					System.out.println("Venda - Chocolate");
 					chocolate.incluiNoEstoque(100);
-					System.out.print("Quantidade");
+					System.out.print("Quantidade: ");
 					chocolate.retiraDoEstoque(scanner.nextInt());
 					System.out.println("Venda realizada.");
 					System.out.println("Estoque atual: " + chocolate.getEstoque());
@@ -152,9 +158,10 @@ public class Programa {
 			}
 				System.out.println("Deseja vender outro produto? (s/n)");
 				opcao = scanner.next().charAt(0);
+				System.out.println("==================================================================================");
 				
 			} while (opcao != 'n');
-			System.out.println("Programa encerrado");
+			System.out.println("==== Programa encerrado =====");
 			
 		} else {
 			System.out.println("Opção inválida! Execute novamente.");
