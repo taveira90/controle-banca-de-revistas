@@ -4,8 +4,8 @@ public class Salgadinho extends Produto {
 
 	private String marca;
 	
-	public Salgadinho(int codigo, String descricao, String marca) {
-		super(codigo, descricao);
+	public Salgadinho(int codigo, String descricao, int estoque, String marca) {
+		super(codigo, descricao, estoque);
 		this.marca = marca;
 	}
 

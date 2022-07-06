@@ -14,29 +14,28 @@ public class Programa {
 		Locale.setDefault(Locale.US);
 		Scanner scanner = new Scanner(System.in);
 		
-		Revista revista = new Revista(0, null, null);
-		Chocolate chocolate = new Chocolate(0, null, null);
-		Salgadinho salgadinho = new Salgadinho(0, null, null);
-		Bebida bebida = new Bebida(0, null, null);
+		Revista revista = new Revista(0, null, 100, null);
+		Chocolate chocolate = new Chocolate(0, null, 100, null);
+		Salgadinho salgadinho = new Salgadinho(0, null, 100, null);
+		Bebida bebida = new Bebida(0, null, 100, null);
 		
-		System.out.println("===== CONTROLE DE ESTOQUE =====");
-		System.out.println("==================================================================================");
+		System.out.println("==================== CONTROLE DE ESTOQUE =========================");
+		System.out.println("Para demonstração o estoque inicia com 100 unidades de cada produto");
+		System.out.println("==================================================================");
 		System.out.println("O que deseja fazer?\n"
-							+ "1 - Incluir"
-							+ "\n2 - Vender");
+							+ "1 - Incluir Produto"
+							+ "\n2 - Vender Produto");
 		char opcao = scanner.next().charAt(0);
-		System.out.println("==================================================================================");
-
+		System.out.println("================================================================");
+		
 		while (opcao != '1' && opcao != '2') {
 			System.out.println("   Opção inválida!"
 					+ "\nO que deseja fazer?"
-					+ "\n1 - Incluir"
-					+ "\n2 - Vender");
+					+ "\n1 - Incluir Produto"
+					+ "\n2 - Vender Produto");
 			opcao = scanner.next().charAt(0);
 		}
 		
-		System.out.println("==================================================================================");
-				
 		if (opcao == '1') {
 			do {
 				System.out.println("Qual produto deseja incluir?\n"
@@ -45,7 +44,7 @@ public class Programa {
 						+ "\n3 - Salgadinho"
 						+ "\n4 - Bebida");
 				opcao = scanner.next().charAt(0);
-				System.out.println("==================================================================================");
+				System.out.println("================================================================");
 				
 				switch (opcao) {
 					case '1':
@@ -120,7 +119,7 @@ public class Programa {
 					opcao = scanner.next().charAt(0);
 				}
 				
-				System.out.println("==================================================================================");
+				System.out.println("================================================================");
 				
 			} while (opcao != 'n');
 			System.out.println("===== PROGRAMA ENCERRADO =====");
@@ -133,7 +132,7 @@ public class Programa {
 						+ "\n3 - Salgadinho"
 						+ "\n4 - Bebida");
 				opcao = scanner.next().charAt(0);
-				System.out.println("==================================================================================");
+				System.out.println("================================================================");
 				
 				switch (opcao) {
 				case '1':
@@ -199,14 +198,12 @@ public class Programa {
 					opcao = scanner.next().charAt(0);
 				}
 				
-				System.out.println("==================================================================================");
+				System.out.println("================================================================");
 				
 			} while (opcao != 'n');
 			System.out.println("==== Programa encerrado =====");
 			
-		} else {
-			System.out.println("Opção inválida! Execute novamente.");
-		}
+		} 
 			
 		scanner.close();
 	}

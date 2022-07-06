@@ -4,8 +4,8 @@ public class Chocolate extends Produto {
 
 	private String marca;
 	
-	public Chocolate(int codigo, String descricao, String marca) {
-		super(codigo, descricao);
+	public Chocolate(int codigo, String descricao, int estoque, String marca) {
+		super(codigo, descricao, estoque);
 		this.marca = marca;
 	}
 

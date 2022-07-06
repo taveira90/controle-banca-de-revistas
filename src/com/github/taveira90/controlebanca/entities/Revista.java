@@ -4,8 +4,8 @@ public class Revista extends Produto {
 	
 	private String editora;
 	
-	public Revista(int codigo, String descricao, String editora) {
-		super(codigo, descricao);
+	public Revista(int codigo, String descricao, int estoque, String editora) {
+		super(codigo, descricao, estoque);
 		this.editora = editora;		
 	}
 

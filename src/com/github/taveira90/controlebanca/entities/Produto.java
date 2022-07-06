@@ -7,9 +7,10 @@ public class Produto {
 	private int estoque;
 	private double valorUnitario;
 	
-	public Produto(int codigo, String descricao) {
+	public Produto(int codigo, String descricao, int estoque) {
 		this.codigo = codigo;
 		this.descricao = descricao;
+		this.estoque = estoque;
 	}
 
 	public int getCodigo() {
@@ -40,11 +41,15 @@ public class Produto {
 		return estoque;
 	}
 	
+	public void setEstoque(int quantidade) {
+		this.estoque += quantidade;
+	}
+	
 	public void incluiNoEstoque(int quantidade) {
 		if (quantidade > 0) {
 			this.estoque += quantidade;
 		} else {
-			System.out.println("Quantiadade inválida! Por favor insira um valor maior que zero.");
+			System.out.println("Quantidade inválida! Por favor insira um valor maior que zero.");
 		}
 	}
 	
