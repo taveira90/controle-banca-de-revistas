@@ -180,7 +180,7 @@ public class Programa {
 					System.out.print("Quantidade: ");
 					quantidadeVenda = scanner.nextInt();
 					if (bebida.getEstoque() > quantidadeVenda) {
-						bebida.retiraDoEstoque(scanner.nextInt());
+						bebida.retiraDoEstoque(quantidadeVenda);
 						System.out.println("Venda realizada.");
 					} else {
 						System.out.println("Estoque insuficiente! Revise a quantidade");
