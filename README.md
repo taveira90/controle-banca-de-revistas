@@ -6,7 +6,7 @@ O programa não possui interface gráfica e nem conexão com banco de dados. É 
 Utilizei a IDE Eclipse para a edição do código e a versão Eclipse Temurin by Adoptium do Java 17 para a contrução do projeto.
 <hr>
 
-### Caso queira visualizar o programa em funcionamento faça o download do arquivo ControleBanca.jar 
+### Caso queira visualizar o programa em funcionamento faça o download do arquivo ControleBanca.jar e siga os passos abaixo: 
 
 ### Lembre-se de ter o java instalado para conseguir executar o arquivo
 ### No Linux:
